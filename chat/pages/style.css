@@ -43,6 +43,17 @@
   background: #f1f3f5;
   border-radius: 5px;
 }
+.messages-list__user-field--padding {
+  margin-top: 4px;
+  padding: 10px 15px 10px 15px;
+}
+.messages-list__user-field--padding-top {
+  width: 16%;
+  padding: 12px 18px 10px 8px;
+}
+.messages-list__user-field--padding-right {
+  padding: 12px 18px 10px 15px;
+}
 .messages-list__user-field--margin {
   margin: 0 18px 0 auto;
 }
@@ -123,9 +134,12 @@ fieldset {
   padding: 18px 0 6px 0;
   margin-bottom: 40px;
   border-color: #fff;
+  border-left: none;
+  border-right: none;
 }
 fieldset > legend {
   width: 20%;
+  margin-left: 5px;
   display: table-cell;
   text-align: center;
   font-family: "Roboto";

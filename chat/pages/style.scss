@@ -48,6 +48,19 @@
     background: #f1f3f5;
     border-radius: 5px;
 
+    &--padding {
+      margin-top: 4px;
+      padding: 10px 15px 10px 15px;
+    }
+    &--padding-top {
+      width: 16%;
+      padding: 12px 18px 10px 8px;
+    }
+
+    &--padding-right {
+      padding: 12px 18px 10px 15px;
+    }
+
     &--margin {
       margin: 0 18px 0 auto;
 
@@ -133,9 +146,12 @@ fieldset {
   padding: 18px 0 6px 0;
   margin-bottom: 40px;
   border-color: #fff;
+  border-left: none;
+  border-right: none;
 
   & > legend {
     width: 20%;
+    margin-left: 5px;
     display: table-cell;
     text-align: center;
     font-family: "Roboto";
