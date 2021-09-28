@@ -254,10 +254,7 @@ h2 {
     width: 61px;
     height: 61px;
     display: none;
-    &:hover {
-      display: block;
-    }
-
+    pointer-events: none;
   }
 
   &__subtitle {
