@@ -1,0 +1,133 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  margin: 46px auto 80px auto;
+  padding-top: 40px;
+  max-width: 651px;
+  background: url("/images/background-image.jpg") no-repeat;
+  background-size: cover;
+  box-shadow: 0px 10px 64px -11px rgba(34, 60, 80, 0.2);
+}
+.messages-list__sent {
+  width: 100%;
+  height: 495px;
+  overflow-y: auto;
+}
+.messages-list__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 15px 19px 15px;
+}
+.messages-list__user:nth-child(2) {
+  padding: 0 35px 19px 15px;
+}
+.messages-list__input-field {
+  width: 100%;
+}
+.messages-list__user-foto {
+  width: 47px;
+  height: 47px;
+}
+.messages-list__user-foto--margin {
+  margin: 0;
+}
+.messages-list__user-field {
+  position: relative;
+  margin: 0 auto 0 18px;
+  padding: 15px 15px 7px 15px;
+  max-width: 470px;
+  background: #f1f3f5;
+  border-radius: 5px;
+}
+.messages-list__user-field--margin {
+  margin: 0 18px 0 auto;
+}
+.messages-list__user-field--margin:before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-right: none !important;
+  border-left: 5px solid #f1f3f5;
+  border-bottom: 5px solid transparent;
+}
+.messages-list__user-field:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-right: 5px solid #f1f3f5;
+  border-bottom: 5px solid transparent;
+}
+.messages-list__user-message {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}
+.messages-list__input-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 91%;
+  margin: 0 auto 0 20px;
+}
+
+textarea {
+  padding: 10px 0 0 10px;
+  margin-bottom: 20px;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  height: 117px;
+  border-radius: 4px;
+  color: #696969;
+}
+
+button {
+  max-width: 144px;
+  padding: 10px 22px;
+  margin-bottom: 30px;
+  border: none;
+  color: #fff;
+  background: #0f54b9;
+  box-shadow: 0px 4px 6px rgba(15, 84, 185, 0.3);
+  border-radius: 21px;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+fieldset {
+  margin: 0;
+  padding: 18px 0 6px 0;
+  margin-bottom: 40px;
+  border-color: #fff;
+}
+fieldset > legend {
+  width: 20%;
+  display: table-cell;
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
