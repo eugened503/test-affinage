@@ -3,7 +3,6 @@
 
 $small: 320px;
 $medium: 480px;
-$big: 767px;
 
 .page {
   display: flex;
@@ -45,29 +44,34 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  order: 1;
 
   &--visibility {
-    @media screen and (max-width: $medium) {
-      display: none;
+    display: none;
+    @media screen and (min-width: $medium) {
+      display: flex;
     }
   }
 
-  @media screen and (max-width: $medium) {
-    order: 1;
+  @media screen and (min-width: $medium) {
+    order: initial;
   }
 
   &__big-square {
     float: left;
     position: relative;
-    width: 66.2%;
+    width: 66%;
     padding-bottom: 66.2%;
     background-color: #a2a9b7;
-    overflow-y: auto;
-    overflow-x: hidden;
-    @media screen and (max-width: $small) {
-      width: 66%;
+
+    @media screen and (min-width: $medium) {
+      width: 66.2%;
     }
 
+    &--overflow {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
     &--color {
       background-color: #e3ebd3;
     }
@@ -76,16 +80,16 @@ h2 {
   &__content {
     position: absolute;
     height: 90%;
-    width: 90%;
-    padding: 26px 20px 0 15px;
-    @media screen and (max-width: $medium) {
-      padding: 18px 20px 0 9px;
+    width: 94%;
+    padding: 18px 20px 0 9px;
+    @media screen and (min-width: $medium) {
+      padding: 27px 20px 0 6px;
     }
 
     &--padding {
       display: flex;
       height: 51%;
-      justify-content: space-between;
+      justify-content: flex-start;
       flex-direction: column;
       padding: 15px 0 0 15px;
 
@@ -95,47 +99,86 @@ h2 {
         font-weight: normal;
         font-size: 14px;
         line-height: 19px;
-        color: #000000;
-        margin: 0;
+        color: #000;
         white-space: nowrap;
-
-        @media screen and (max-width: $big) {
-          word-break: break-all;
-          white-space: pre-wrap;
-        }
-
-        &:nth-child(3) {
-          margin: 20px 0 0 0;
-        }
       }
     }
   }
 
-  &__content-paragraph {
-    position: absolute;
+  &__text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
-    margin: 0;
-    top: 63px;
-
-    right: -20px;
-
-    @media screen and (max-width: 608px) {
-      right: -15px;
+    &--padding {
+      & p {
+        margin: 0;
+      }
     }
+    &--margin-bottom {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__line {
+    height: 0;
+    width: 100%;
+    padding-top: 13px;
+    border: none;
+    border-bottom: 1px dashed #000;
+    &--margin {
+      margin: 20px 0 0 10px;
+    }
+
+    &--indent {
+      margin: 0 10px;
+    }
+
+    &--margin-right {
+      margin-right: 10px;
+    }
+
+    &--margin-left {
+      margin-left: 10px;
+    }
+    &--margin-right-top {
+      margin: 20px 10px 0 0;
+    }
+  }
+
+  &__line-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 2px;
+  }
+
+  &__patronymic {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & p {
+      margin: 0;
+      text-align: right;
+    }
+  }
+
+  &__text-paragraph {
+    margin: 20px 0 0 0;
   }
 
   &__square-group {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(100% - 66.2% - 10px);
+    width: calc(100% - 66% - 6px);
 
-    @media screen and (max-width: $medium) {
+    @media screen and (min-width: 321px) and (max-width: $medium) {
       width: calc(100% - 66.2% - 6px);
     }
 
-    @media screen and (max-width: $small) {
-      width: calc(100% - 66% - 6px);
+    @media screen and (min-width: $medium) {
+      width: calc(100% - 66.2% - 10px);
     }
 
     &--text {
@@ -175,10 +218,10 @@ h2 {
     position: absolute;
     height: 90%;
     width: 90%;
-    padding: 5%;
+    padding: 2px 0 0 11px;
 
-    @media screen and (max-width: $medium) {
-      padding: 2px 0 0 11px;
+    @media screen and (min-width: $medium) {
+      padding: 5%;
     }
 
     &--padding {
@@ -247,12 +290,13 @@ h2 {
   padding-top: 10px;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  flex-direction: column;
+  order: -1;
 
-  @media screen and (max-width: $medium) {
-    flex-direction: column;
-    order: -1;
+  @media screen and (min-width: $medium) {
+    flex-direction: row;
+    order: initial;
   }
 
   &--order {
@@ -276,15 +320,18 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 66.2%;
+    width: 100%;
     min-height: 320px;
-    @media screen and (max-width: $medium) {
-      width: 100%;
+
+    @media screen and (min-width: $medium) {
+      width: 66.2%;
     }
 
     &--order {
-      @media screen and (max-width: $medium) {
-        order: -1;
+      order: -1;
+
+      @media screen and (min-width: $medium) {
+        order: initial;
       }
     }
   }
@@ -297,8 +344,9 @@ h2 {
     min-height: 155px;
 
     &--margin {
-      @media screen and (max-width: $medium) {
-        margin: 0 0 10px 0;
+      margin: 0 0 10px 0;
+      @media screen and (min-width: $medium) {
+        margin: 0;
       }
     }
   }
@@ -334,9 +382,10 @@ h2 {
     width: 100%;
     background-color: #e8ebed;
     min-height: 155px;
+    margin: 10px 0;
 
-    @media screen and (max-width: $medium) {
-      margin: 10px 0;
+    @media screen and (min-width: $medium) {
+      margin: 0;
     }
 
     &--color-orange {
@@ -344,23 +393,23 @@ h2 {
     }
 
     &--order {
-      @media screen and (max-width: $medium) {
-        order: -1;
+      order: -1;
+      @media screen and (min-width: $medium) {
+        order: initial;
       }
     }
   }
 
   &__column {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    min-height: 320px;
-    width: calc(100% - 66.4% - 7px);
-
-    @media screen and (max-width: $medium) {
-      width: 100%;
-      min-height: auto;
-      flex-direction: row;
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    @media screen and (min-width: $medium) {
+      flex-direction: column;
+      min-height: 320px;
+      width: calc(100% - 66.4% - 7px);
     }
   }
 
@@ -370,10 +419,10 @@ h2 {
     justify-content: flex-end;
     background-color: #90bce8;
     min-height: 155px;
+    width: calc(50% - 5px);
 
-    @media screen and (max-width: $medium) {
-      width: calc(50% - 5px);
-      height: calc(50% - 5px);
+    @media screen and (min-width: $medium) {
+      width: auto;
     }
 
     &--color-orange {

@@ -7,13 +7,14 @@
   margin: 46px auto 80px auto;
   padding-top: 40px;
   max-width: 651px;
-  background: url("/images/background-image.jpg") no-repeat;
+  background: url("../images/background-image.jpg") no-repeat;
   background-size: cover;
   box-shadow: 0px 10px 64px -11px rgba(34, 60, 80, 0.2);
   &__sent {
     width: 100%;
     height: 495px;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   &__user {
@@ -106,6 +107,9 @@ textarea {
   height: 117px;
   border-radius: 4px;
   color: #696969;
+  outline: none;
+  border: none;
+  resize: none;
 }
 
 button {
@@ -121,6 +125,7 @@ button {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+  cursor: pointer;
 }
 
 fieldset {
